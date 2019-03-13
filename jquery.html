@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <p>if you click on the "Hide" button, I will dissapear</p>
+</div>
+
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="aime">aime</button>
+<script>
+    $(document).ready(function () {
+       $("#hide").click(function () {
+           $("p").hide();
+       });
+       $("#show").click(function () {
+           $("p").show();
+       });
+    });
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            var div = $("div");
+            div.animate({left: '100px'}, "slow");
+            div.animate({fontSize: '100px'}, "slow");
+        });
+    });
+</script>
+</body>
+</html>
